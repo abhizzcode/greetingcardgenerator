@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import GreetingCardForm from './components/GreetingCardForm';
+import { Container, CssBaseline, Typography } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <CssBaseline />
+      <div className="App">
+        <Typography variant="h6" gutterBottom>
+          Greeting Card Generator
+        </Typography>
+        <GreetingCardForm />
+      </div>
+    </Container>
   );
 }
 
